@@ -2,15 +2,24 @@
 let counter = 0;
 
 function increaseCount() {
-    console.log(++counter);
-    // counter++;
+    counter++;
+    if (counter <= 5) {
+        console.log('Counted!');
+    } else {
+        console.log('Done');
+    }
 }
 
 // increaseCount();
 
 
 function decreaseCount() {
-    console.log(--counter);
+    counter--;
+    if (counter <= 5) {
+        console.log('Counted!');
+    } else {
+        console.log('Done');
+    }
     // counter--;
 }
 

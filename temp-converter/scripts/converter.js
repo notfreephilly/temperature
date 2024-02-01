@@ -3,14 +3,35 @@
 // Needs to take and convert input from prompt
 
 
+// Update:
+// Add area for user to add input
+// Add ability to convert from both F to C and C to F - include a dropdown to choose from
+// Ability to convert F - F and C - C
+// Make sure decimals dont extend past one digit
+// Put a cap on digits entered in input
+// 
+// Enhance styling
+// Mobile responsive*
+
+// Mercury bar, emojis maybe
+
+let goButton = document.getElementById('btn').addEventListener('click', convertTemp);
+
 
 function convertTemp() {
-    // convert input from prompt into a number - this will be celcius
-    let celsius = Number(prompt('Give me a number'));
+    let userInput = Number(document.getElementById('inp').value);
+    let fahrenheit = (userInput * 9 / 5) + 32;
+    let celsius = (userInput - 32) * 5 / 9;
+    let errorMsg = "Please use a number";
 
-    // using a formula to convert the value from the celcius variable to fahrenheit, storing it in the temperature variable
-    let temperature = (`${celsius}` * 9 / 5) + 32;
 
-    // going inside the HTML and displaying the value of temerature in the element with the ID of 'converted'
-    document.getElementById('converted').innerHTML = temperature;
+    if (document.getElementById('unit').value === "f-deg" && document.getElementById('unit2').value === "f-deg2" || document.getElementById('unit').value === "c-deg" && document.getElementById('unit2').value === "c-deg2") {
+        document.getElementById('output').innerHTML = userInput;
+    }
+    else if (document.getElementById('unit').value === "f-deg") {
+        document.getElementById('output').innerHTML = celsius.toFixed(1);
+    }
+    else if (document.getElementById('unit').value === "c-deg") {
+        document.getElementById('output').innerHTML = fahrenheit.toFixed(1);
+    }
 }

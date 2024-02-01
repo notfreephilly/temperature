@@ -5,15 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Temperature converter</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato&family=Roboto+Condensed&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div>
-        <img src="./img/weather.jpg" alt="">
-        <h1>Celcius to Fahrenheit converter</h1>
-        <button onclick="convertTemp()">Convert to C -> F</button>
-        <p id="converted"></p>
-    </div>
+    <main>
+        <div class="weather-icons">
+           
+        </div>
+        <div class="temp-main">
+            <div class="input-container">
+                <h2>☀️ Convert your temperature &#8595; ☀️</h2>
+
+                <div class="temp-input">
+                    <h4>Enter your number:</h4>
+                    <input type="text" id="inp" maxlength="5">
+
+                    
+                    <select name="" id="unit">
+                        <option value="f-deg" id="opt1-f1">Fahrenheit (F&deg;)</option>
+                        <option value="c-deg" id="opt1-c1">Celsius (C&deg;)</option>
+                    </select>
+                    
+                    <h4>Select option to convert to:</h4>
+                    <select name="" id="unit2">
+                        <option value="c-deg2" id="opt2-c2">Celsius (C&deg;)</option>
+                        <option value="f-deg2" id="opt2-f2">Fahrenheit (F&deg;)</option>
+                    </select>
+ 
+                </div>
+
+                <button id="btn">Convert</button>
+
+                <div class="user-output" id="output"></div>
+
+            </div>
+
+        </div>
+    </main>
 
     <script src="./scripts/converter.js"></script>
 </body>
