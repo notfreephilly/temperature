@@ -12,9 +12,6 @@
 <body>
 
     <main>
-        <div class="weather-icons">
-           
-        </div>
         <div class="temp-main">
             <div class="input-container">
                 <h2>☀️ Convert your temperature &#8595; ☀️</h2>
@@ -44,6 +41,23 @@
             </div>
 
         </div>
+<!-- Seperator between temperature converters -->
+        <div class="seperator-msg">
+            <p>-- OR --</p>
+        </div>
+
+        <div class="temp-range-main">
+
+            <div class="input-container">
+                <h2>Temperature Range Converter &#8595;</h2>
+                <button id="range-btn">Convert my range</button>
+                <p>Psst! Right click your mouse and go to Inspect -> Console tab to view your results in your browser too!</p>               
+                <div class="range-output" >
+                    <div id="range-result"></div>
+                </div>
+            </div>
+        </div>
+
     </main>
 
     <script src="./scripts/converter.js"></script>
