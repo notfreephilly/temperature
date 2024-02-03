@@ -109,9 +109,9 @@ main{
 .range-output {
     font-size: 1.25rem;
     width: 300px;
-    margin-top: 1.5rem;
-    padding: 5rem 4rem;
+    margin: 1.5rem 0;
+    padding: 1rem 0;
     border: 2px solid black;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow: auto;
+    text-align: center;
 }

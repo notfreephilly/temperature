@@ -43,12 +43,12 @@ function convertTemperatureRange() {
     for (let i = startValue; i <= endValue; i++){
         if (scale === "C" || scale === "c") {
             let fahrenheit = (i * 9 / 5) + 32;
-            document.getElementById('range-result').innerHTML += fahrenheit.toFixed(1);
+            document.getElementById('range-result').innerHTML += `<p>${fahrenheit.toFixed(1)}</p>`;
             console.log(fahrenheit.toFixed(1));
         }
         else if (scale === "F" || scale === "f") {
             let celsius = (i - 32) * 5 / 9;
-            document.getElementById('range-result').innerHTML += celsius.toFixed(1);
+            document.getElementById('range-result').innerHTML += `<p>${celsius.toFixed(1)}</p>`;
             console.log(celsius.toFixed(1));
         }
     }
